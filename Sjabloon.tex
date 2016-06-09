@@ -34,6 +34,25 @@
 	\definecolor{oranjerood50pc}{RGB}{248,163,127}
 	\definecolor{blauwgroen}{RGB}{0,156,171}
 	\definecolor{blauwgroen50pc}{RGB}{111,195,206}
+
+% HUISSTIJL ACHTERGROND VOORPAGINA
+
+	\usepackage[pages=some]{background}
+
+% With the eso-pic package, pages can have backgrounds, while still having text on top, this template used this package to add the thomas more background to the title page.
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{%
+	\put(0,0){%
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,%
+			keepaspectratio]{images/ThomasMoreBackground.png}%
+			\vfill
+			}
+		}
+	}
+
 % ============
 
 % Te veel subsection ruimte oplossen
@@ -89,6 +108,10 @@
 \begin{document}
 % VOORPAGINA
 	\begin{titlepage}
+			% Code is nog niet klaar, later variabelen toevoegen om alles makkelijker te kunnen aanpassen en wat betere code gebruiken.
+
+				 \AddToShipoutPicture*{\BackgroundPic}
+
 				\pagenumbering{gobble}
 				\vspace*{130mm}
 				\begin{flushright}
@@ -127,6 +150,7 @@
 \chapter{Inleiding}
 
 Dit is een LaTeX template voor een Thomas More hogeschool paper.
+ \includegraphics[scale=0.5]{images/ThomasMoreBackground.png}
 
 \newpage
 
