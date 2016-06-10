@@ -5,10 +5,16 @@
 \title{Heading 1}
 \date{2015-2016}
 \author{Lorem Ipsum Author}
-\usepackage{helvet} 				%Helvetica Font
+
+\usepackage{fix-cm}
 \usepackage{helvet} 				% Helvetica Font
 \usepackage{baskervald}			% Baskervald font
 \usepackage{lipsum}				% Om Lorem Ipsum te maken
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{color}
+\usepackage{multirow}
+\usepackage{multicol}
 \usepackage{tabularx}			% Make tables
 \usepackage{multicol}				% Create multiple columns
 \usepackage{enumitem}			% Make Lists
@@ -21,6 +27,7 @@
 \usepackage{titlesec}				% Enhancement/replacement of the standard LaTeX title, headers and content macros
 \usepackage{url}				% Format url's in a better way, is not a replacement for the hyperref package
 \usepackage{amsmath}			% Enhancements for printing math formulas
+\usepackage{graphicx}
 \usepackage{eurosym}			% Use the euro symbol in LaTeX
 
 % Om afbeeldingen te importeren
@@ -61,6 +68,7 @@
 
 	\usepackage{titlesec}
 	\titlespacing{\subsection}{0pt}{*1}{*1}
+
 
 % ===========
 
@@ -107,8 +115,11 @@
 %%%--- MAIN DOCUMENT ---%%%
 
 % Begin The document
+
 \begin{document}
+
 % VOORPAGINA
+
 	\begin{titlepage}
 			% Code is nog niet klaar, later variabelen toevoegen om alles makkelijker te kunnen aanpassen en wat betere code gebruiken.
 
@@ -116,6 +127,7 @@
 
 				\pagenumbering{gobble}
 				\vspace*{130mm}
+
 				\begin{flushright}
 				\bf
 				\color{oranjerood}
@@ -126,7 +138,7 @@
 					\selectfont
 					\thetitle
 				}
-				
+
 				\vspace{0mm}
 				\LARGE
 				Heading 2
@@ -147,7 +159,6 @@
 \pagenumbering{arabic}
 
 % BEGIN
-
 
 \chapter{Inleiding}
 
