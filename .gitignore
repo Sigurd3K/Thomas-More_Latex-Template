@@ -1,6 +1,7 @@
 # CUSTOM GITIGNORE
 
 Backup
+Privacy and*
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
