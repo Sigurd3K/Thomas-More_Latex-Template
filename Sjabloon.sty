@@ -1,37 +1,48 @@
+\ProvidesPackage{sjabloon}
+
 \usepackage{titling}
 
 % Packages (Algemeen):
-	\usepackage{fix-cm}
-	\usepackage{helvet} 				% Helvetica Font
-	\usepackage{baskervald}			% Baskervald font
+
+% FONTS:
+	\usepackage{helvet}			% Helvetica Font
+	\usepackage{baskervald}		% Baskervald font
+
+
+% HYPERLINKS:
+	\usepackage{hyperref}		% Printing hyperlinks
+	\usepackage{url}				% Format url's in a better way, is not a replacement for the hyperref package
+
+% IMAGES:
+	\usepackage{graphicx}			% Print images
+	\graphicspath{ {images/} }	% Set default images path
+
+% TABLES:
+	\usepackage{tabularx}			% Make tables
+	\usepackage{array}
+
 	\usepackage{lipsum}				% Om Lorem Ipsum te maken
+	\usepackage{blindtext}			% Lorem Ipsum
 	\usepackage{geometry}
 	\usepackage[T1]{fontenc}
 	\usepackage[dvipsnames]{color}
 	\usepackage{multirow}
-	\usepackage{multicol}
-	\usepackage{tabularx}			% Make tables
-	\usepackage{multicol}				% Create multiple columns
+	\usepackage{multicol}			% Create multiple columns
 	\usepackage{enumitem}			% Make Lists
 	\usepackage{listings}				% Display code, with syntax coloring and indenting
 	\usepackage[dutch]{babel}		% Nederlandse tekenafstand - woordafbraak
 	\usepackage{mdframed}			% Make text boxes
 	\usepackage[usenames,dvipsnames]{xcolor}
 	\usepackage{color}				% Kleuren definieren met variabelen
-	\usepackage{hyperref}			% Printing hyperlinks
 	\usepackage{titlesec}				% Enhancement/replacement of the standard LaTeX title, headers and content macros
-	\usepackage{url}				% Format url's in a better way, is not a replacement for the hyperref package
 	\usepackage{amsmath}			% Enhancements for printing math formulas
-	\usepackage{graphicx}
 	\usepackage{eurosym}			% Use the euro symbol in LaTeX
-	\usepackage{blindtext}			% Lorem Ipsum
+	\usepackage{setspace} 			% Edit space between lines (for example on the title page)
 
-	% Om afbeeldingen te importeren:
-		\usepackage{graphicx}
-		\graphicspath{ {images/} }
 
-% Kleuren:
-	% Later systeem bedenken om ook CMYK colors te doen.
+
+% COLORS:
+	% TODO: SYSTEM TO USE CMYK COLORS.
 	\definecolor{grijs}{RGB}{150,150,150}
 	\definecolor{oranjerood}{RGB}{240,76,37}
 	\definecolor{oranjerood50pc}{RGB}{248,163,127}
@@ -45,8 +56,7 @@
 
 % With the eso-pic package, pages can have backgrounds, while still having text on top, this template used this package to add the thomas more background to the title page.
 	\usepackage{eso-pic}
-	\ProvidesPackage{sjabloon}
-	%
+
 	\newcommand\BackgroundPic{%
 		\put(0,0){%
 			\parbox[b][\paperheight]{\paperwidth}{%
@@ -70,7 +80,7 @@
 
 % Font veranderen
 	\renewcommand*{\familydefault}{\sfdefault}
-	
+
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern} % load a font with all the characters
 
@@ -79,7 +89,7 @@
 
 % Edit the margins
 	\geometry{a4paper,tmargin=20mm,bmargin=30mm,lmargin=.5in,rmargin=.7in,headheight=0in,headsep=0in,footskip=.3in}
- 
+
 \setlength{\parindent}{.1in}
 \setlength{\parskip}{.1in}
 
@@ -90,7 +100,7 @@
 %%%%%%%%%%%%
 
 	\usepackage{etoolbox} % For classes and package authors, to edit macro below
-	
+
 	% Hoofdstuk tekst verwijderen en voorkomen
 	% dat Latex een nieuwe pagina maakt voor een nieuw hoofdstuk (Standaard uitgeschakeld):
 		%\makeatletter
@@ -103,6 +113,6 @@
 	\titleformat{\chapter}[display]
 	    {\normalfont\large\bfseries}{}{2pt}{\Huge}
 	\titlespacing*{\chapter}{0pt}{-40pt}{20pt}
-	
+
 % Remove tab before the start of a new paragraph:
 	\setlength{\parindent}{0ex}
