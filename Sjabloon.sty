@@ -41,7 +41,13 @@
 	\usepackage{eurosym}			% Use the euro symbol in LaTeX
 	\usepackage{setspace} 			% Edit space between lines (for example on the title page)
 
+% DUTCH APA BIBLIGRAPHY:
+	\usepackage{csquotes}
+	\usepackage[style=apa, backend=biber, block=ragged]{biblatex}
 
+	\setlength\bibitemsep{1.5\itemsep}
+	\addbibresource{mybib.bib}	% Bibliography source file
+	\DeclareLanguageMapping{dutch}{dutch-apa}	% Bibliography in Dutch
 
 % COLORS:
 	% TODO: SYSTEM TO USE CMYK COLORS.
