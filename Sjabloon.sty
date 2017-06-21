@@ -8,6 +8,8 @@
 	\usepackage{helvet}			% Helvetica Font
 	\usepackage{baskervald}		% Baskervald font
 
+% LANGUAGE:
+	\usepackage[dutch]{babel}	% Nederlandse tekenafstand - woordafbraak
 
 % HYPERLINKS:
 	\usepackage{hyperref}		% Printing hyperlinks
@@ -21,6 +23,7 @@
 	\usepackage{tabularx}			% Make tables
 	\usepackage{array}
 
+% OTHERS:
 	\usepackage{lipsum}				% Om Lorem Ipsum te maken
 	\usepackage{blindtext}			% Lorem Ipsum
 	\usepackage{geometry}
@@ -29,17 +32,22 @@
 	\usepackage{multirow}
 	\usepackage{multicol}			% Create multiple columns
 	\usepackage{enumitem}			% Make Lists
-	\usepackage{listings}				% Display code, with syntax coloring and indenting
-	\usepackage[dutch]{babel}		% Nederlandse tekenafstand - woordafbraak
+	\usepackage{listings}			% Display code, with syntax coloring and indenting
 	\usepackage{mdframed}			% Make text boxes
 	\usepackage[usenames,dvipsnames]{xcolor}
 	\usepackage{color}				% Kleuren definieren met variabelen
-	\usepackage{titlesec}				% Enhancement/replacement of the standard LaTeX title, headers and content macros
+	\usepackage{titlesec}			% Enhancement/replacement of the standard LaTeX title, headers and content macros
 	\usepackage{amsmath}			% Enhancements for printing math formulas
 	\usepackage{eurosym}			% Use the euro symbol in LaTeX
 	\usepackage{setspace} 			% Edit space between lines (for example on the title page)
 
+% DUTCH APA BIBLIGRAPHY:
+	\usepackage{csquotes}
+	\usepackage[style=apa, backend=biber, block=ragged]{biblatex}
 
+	\setlength\bibitemsep{1.5\itemsep}
+	\addbibresource{mybib.bib}	% Bibliography source file
+	\DeclareLanguageMapping{dutch}{dutch-apa}	% Bibliography in Dutch
 
 % COLORS:
 	% TODO: SYSTEM TO USE CMYK COLORS.
@@ -63,7 +71,7 @@
 				\vfill
 				\centering
 				\includegraphics[width=\paperwidth,height=\paperheight,%
-				keepaspectratio]{images/ThomasMoreBackground.png}%
+				keepaspectratio]{images/ThomasMoreBackground.jpeg}%
 				\vfill
 				}
 			}
@@ -111,7 +119,7 @@
 	\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
 	%
 	\titleformat{\chapter}[display]
-	    {\normalfont\large\bfseries}{}{2pt}{\Huge}
+		{\normalfont\large\bfseries}{}{2pt}{\Huge}
 	\titlespacing*{\chapter}{0pt}{-40pt}{20pt}
 
 % Remove tab before the start of a new paragraph:
